@@ -106,31 +106,34 @@ def name_cocktail(new_drink):
 
     new_drink_adj = []
     new_drink_noun = []
+    new_drink_name = []
     print(new_drink)
     for flavor in new_drink:
         if flavor == "glug of run" or flavor == "slug of whisky" or flavor == "splash of gin":
-            new_drink_adj == "Tough"
-            new_drink_noun == "Sea-Dog"
+            new_drink_adj.append("Tough")
+            new_drink_noun.append("Sea-Dog")
 
         if flavor == "olive on a stick" or flavor == "salt-dusted rim" or "rasher of bacon":
-            new_drink_adj == "Salty"
-            new_drink_noun == "Walrus"
+            new_drink_adj.append("Salty")
+            new_drink_noun.append("Walrus")
 
         if flavor == "shake of bitters" or flavor == "splash of tonic" or flavor == "twist of lemon peel":
-            new_drink_adj == "Mean Ol"
-            new_drink_noun == "Crab"
+            new_drink_adj.append("Mean Ol")
+            new_drink_noun.append("Crab")
 
         if flavor == "sugar cube" or flavor == "spoonful of honey" or flavor == "spash of cola":
-            new_drink_adj == "Fluffy"
-            new_drink_noun = "Bunny"
+            new_drink_adj.append("Fluffy")
+            new_drink_noun.append("Bunny")
 
         if flavor == "slice of orange" or flavor == "dash of cassis" or flavor == "cherry on top":
-            new_drink_adj == "Tropical"
-            new_drink_noun == "Toucan"
-        print(new_drink_adj)
-        print(new_drink_noun)
-#    print(choice(new_drink_adj), choice(new_drink_noun))
+            new_drink_adj.append("Tropical")
+            new_drink_noun.append("Toucan")
 
+        new_drink_name.append(choice(new_drink_adj))
+        new_drink_name.append(choice(new_drink_noun))
+
+        new_drink_name = " ".join(new_drink_name)
+        return new_drink_name
 
 if __name__ == '__main__':
 
